@@ -1,46 +1,19 @@
-# IK Sistemas — Klehr Indira Ayelén
+# 🌿 IK Sistemas
 
-Sitio web oficial del atelier tecnológico. Estructura modular, segura y mantenible.
+**Sitio web oficial de IK Sistemas** — sitio web digital de **Indira Klehr**.
 
-## Estructura
-ik-sistemas/
-├── *.html Páginas
-├── css/ Estilos (main + components)
-├── js/ Scripts separados por responsabilidad
-├── partials/ Header y footer compartidos
-└── assets/ Imágenes, fuentes
+Diseño y desarrollo sistemas, webs, marcas e invitaciones digitales a medida.
 
+🌐 **[klehrindira.com](https://klehrindira.com)**
 
-## Cómo ejecutar en local
+🛠️ Tecnologías
+HTML5 · Tailwind CSS · JavaScript · Three.js
 
-Como `layout.js` usa `fetch()`, **no se puede abrir con `file://`**. Hay que servir por HTTP:
+📞 Contacto
+📧 indiklehr@gmail.com
 
-```bash
-# Opción 1: Python
-python -m http.server 8000
+💬 WhatsApp
 
-# Opción 2: Node
-npx serve
+💼 LinkedIn
 
-# Opción 3: Live Server de VSCode
-
-
-
----
-
-## 🛡️ Resumen de protecciones implementadas
-
-| Capa | Medida | Archivo |
-|---|---|---|
-| **Servidor** | Cabeceras CSP, X-Frame-Options, HSTS | `.htaccess` / `netlify.toml` / `vercel.json` |
-| **Servidor** | Bloqueo de archivos sensibles (`.env`, `.git`) | `.htaccess` |
-| **Servidor** | HTTPS forzado (comentado, activar tras SSL) | `.htaccess` |
-| **Cliente** | Anti-clickjacking (rompe iframes) | `js/security.js` |
-| **Cliente** | Sanitización de query strings | `js/security.js` |
-| **Cliente** | Bloqueo de formularios a dominios externos | `js/security.js` |
-| **Cliente** | Anti-drag de imágenes | `js/security.js` |
-| **Código** | `rel="noopener noreferrer"` en todos los `_blank` | Todos los HTML |
-| **Código** | `<meta name="referrer">` | Todos los HTML |
-| **Código** | JS separado (permite CSP estricta) | Estructura general |
-
-> ⚠️ **Nota importante:** Las protecciones del `security.js` son **disuasivas** (cliente). Un atacante con acceso a DevTools puede saltarlas. La **única protección real** es la del servidor (`.htaccess`) y nunca exponer secretos en el frontend. No hay tokens, claves ni contraseñas en este código, así que está bien.
+📷 Instagram
