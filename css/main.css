@@ -1,0 +1,94 @@
+/* ============================================================
+   IK SISTEMAS — ESTILOS GLOBALES
+   ============================================================ */
+
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child  { margin-bottom: 0 !important; }
+}
+
+::-webkit-scrollbar { display: none; }
+* { scrollbar-width: none; }
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  user-select: none;
+  vertical-align: middle;
+}
+
+#threejs-container,
+#threejs-container-ANIMATION_21 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#threejs-container canvas,
+#threejs-container-ANIMATION_21 canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Para dibujo.html standalone: body ocupa toda la pantalla */
+body.bg-black #threejs-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.inline-defs-container {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(7, 19, 48, 0.85);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.modal-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.faq-item .faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-in-out;
+}
+.faq-item.is-open .faq-content { max-height: 500px; }
+.faq-item .faq-toggle .material-symbols-outlined { transition: transform 0.3s ease; }
+.faq-item.is-open .faq-toggle .material-symbols-outlined { transform: rotate(180deg); }
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.5; }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (max-width: 1024px) {
+  #threejs-container,
+  #threejs-container-ANIMATION_21 { min-height: 380px; }
+}
+@media (max-width: 640px) {
+  #threejs-container,
+  #threejs-container-ANIMATION_21 { min-height: 320px; }
+}
+
+::selection { background: #38bdf8; color: #001e2c; }
+
+body { -webkit-tap-highlight-color: transparent; }

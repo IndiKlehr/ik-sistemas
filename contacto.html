@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Contacto | IK Sistemas</title>
+    <meta name="description"
+        content="Contame tu proyecto. Consulta gratuita, sin compromiso. Respuesta directa por WhatsApp.">
+
+        <!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta property="og:title" content="IK Sistemas — Soluciones Digitales a Medida">
+<meta property="og:description" content="Sistemas, webs, marcas e invitaciones digitales hechas a medida.">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/config/tailwind-config.js"></script>
+</head>
+
+<body class="bg-surface font-body-default text-body-default text-on-surface antialiased">
+
+    <div id="site-header"></div>
+
+    <main class="w-full pt-20 bg-surface min-h-screen">
+        <div class="flex flex-col w-full">
+
+            <!-- HERO -->
+            <section class="max-w-7xl mx-auto px-6 lg:px-12 py-12">
+                <div class="flex flex-col items-center text-center mb-16">
+                    <div class="pill-status mb-6">
+                    </div>
+                    <h1 class="font-headline-lg text-headline-lg text-text-primary tracking-tight max-w-3xl mb-4">
+                        Contacto</h1>
+                    <p class="font-body-lead text-body-lead text-text-secondary max-w-2xl">
+                        Consulta gratuita. Sin compromiso.
+                    </p>
+                </div>
+
+                <!-- Form + Info -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-24">
+
+                    <!-- Formulario -->
+                    <div
+                        class="lg:col-span-7 bg-surface-container/80 backdrop-blur-xl p-6 sm:p-10 rounded-2xl shadow-xl relative overflow-hidden">
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-electric via-blue-cyan to-gold-metallic">
+                        </div>
+
+                        <form class="flex flex-col gap-6" id="contactConfigurator" novalidate>
+                            <!-- Nombre + Apellido -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="flex flex-col gap-2">
+                                    <label class="font-label-caps text-label-caps text-text-secondary uppercase"
+                                        for="clientName">Nombre</label>
+                                    <input id="clientName" name="name"
+                                        class="w-full bg-surface-container-low px-4 py-3 rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:bg-surface-container-high transition-colors"
+                                        type="text" placeholder="Tu nombre" autocomplete="given-name" required
+                                        maxlength="40">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="font-label-caps text-label-caps text-text-secondary uppercase"
+                                        for="clientLastName">Apellido</label>
+                                    <input id="clientLastName" name="lastName"
+                                        class="w-full bg-surface-container-low px-4 py-3 rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:bg-surface-container-high transition-colors"
+                                        type="text" placeholder="Tu apellido" autocomplete="family-name" required
+                                        maxlength="40">
+                                </div>
+                            </div>
+
+                            <!-- Correo opcional -->
+                            <div class="flex flex-col gap-2">
+                                <label class="font-label-caps text-label-caps text-text-secondary uppercase"
+                                    for="clientEmail">
+                                    Correo electrónico <span
+                                        class="text-text-muted normal-case tracking-normal">(opcional)</span>
+                                </label>
+                                <input id="clientEmail" name="email"
+                                    class="w-full bg-surface-container-low px-4 py-3 rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:bg-surface-container-high transition-colors"
+                                    type="email" placeholder="nombre@correo.com" autocomplete="email" maxlength="80">
+                            </div>
+
+                            <!-- Consulta -->
+                            <div class="flex flex-col gap-2">
+                                <label class="font-label-caps text-label-caps text-text-secondary uppercase"
+                                    for="projectDetails">Su consulta</label>
+                                <textarea id="projectDetails" name="details" rows="5"
+                                    class="w-full bg-surface-container-low px-4 py-3 rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:bg-surface-container-high transition-colors resize-y"
+                                    placeholder="Contame qué necesitás(web,diseño o invitaciones)..."
+                                    required maxlength="800"></textarea>
+                                <span class="font-body-sm text-body-sm text-text-muted text-right" id="charCounter">0 /
+                                    800</span>
+                            </div>
+
+                            <!-- No soy un robot -->
+                            <div class="flex flex-col gap-3">
+                                <div id="captchaBox"
+                                    class="flex items-center justify-between gap-4 p-4 rounded-xl bg-surface-container-low border border-white/5 select-none cursor-pointer transition-all hover:bg-surface-container-high"
+                                    role="checkbox" aria-checked="false" tabindex="0">
+                                    <div class="flex items-center gap-3">
+                                        <span id="captchaCheckbox"
+                                            class="w-6 h-6 rounded-md border-2 border-outline-variant bg-surface-container flex items-center justify-center transition-all">
+                                            <span id="captchaCheckIcon"
+                                                class="material-symbols-outlined text-[18px] text-surface-base opacity-0 transition-opacity">check</span>
+                                        </span>
+                                        <span class="font-body-default text-body-default text-text-primary">No soy un
+                                            robot</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span id="captchaBadge"
+                                            class="font-label-caps text-label-caps text-text-muted uppercase tracking-wider">Verificar</span>
+                                        <span
+                                            class="material-symbols-outlined text-gold-metallic text-2xl">verified_user</span>
+                                    </div>
+                                </div>
+
+                                <div id="captchaVerified"
+                                    class="hidden items-center gap-2 px-4 py-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30">
+                                    <span class="material-symbols-outlined text-emerald-400 text-lg">verified</span>
+                                    <span
+                                        class="font-body-sm text-body-sm text-emerald-400 font-semibold">Verificado</span>
+                                    <span class="font-body-sm text-body-sm text-text-secondary ml-auto">Gracias</span>
+                                </div>
+                            </div>
+
+                            <!-- Botón -->
+                            <div class="pt-2">
+                                <button id="btnSendWhatsApp" type="button" class="group relative w-full inline-flex items-center justify-center gap-3 px-6 py-4 rounded-2xl
+                 bg-gradient-to-r from-[#25D366] via-[#1EBE5D] to-[#128C7E]
+                 text-white font-label-interactive text-label-interactive font-semibold
+                 shadow-[0_8px_24px_-8px_rgba(37,211,102,0.6)]
+                 hover:shadow-[0_12px_32px_-8px_rgba(37,211,102,0.8)]
+                 hover:scale-[1.01] active:scale-[0.99]
+                 transition-all duration-300
+                 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-[0_8px_24px_-8px_rgba(37,211,102,0.3)]
+                 overflow-hidden">
+                                    <!-- Brillo que pasa al hacer hover -->
+                                    <span
+                                        class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></span>
+
+                                    <!-- Ícono WhatsApp SVG -->
+                                    <svg class="w-5 h-5 relative z-10 shrink-0" viewBox="0 0 24 24" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                                    </svg>
+
+                                    <span class="relative z-10">Enviar consulta por WhatsApp</span>
+
+                                    <!-- Ícono flecha que se mueve al hover -->
+                                    <span
+                                        class="material-symbols-outlined text-lg relative z-10 transition-transform group-hover:translate-x-1">arrow_forward</span>
+                                </button>
+                            </div>
+
+                            <!-- Cartelito de error / estado -->
+                            <div id="formFeedback"
+                                class="hidden items-start gap-3 p-4 rounded-xl border transition-all">
+                                <span id="formFeedbackIcon"
+                                    class="material-symbols-outlined text-lg shrink-0 mt-0.5">error</span>
+                                <div class="flex flex-col gap-0.5">
+                                    <span id="formFeedbackTitle"
+                                        class="font-label-interactive text-label-interactive">Revisá los datos</span>
+                                    <span id="formFeedbackMsg" class="font-body-sm text-body-sm">Completá todos los
+                                        campos para continuar.</span>
+                                </div>
+                            </div>
+
+                            <!-- Aviso de privacidad -->
+                            <p
+                                class="font-body-sm text-body-sm text-text-muted text-center flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined text-sm text-gold-metallic">lock</span>
+                                Tus datos solo se usan para contactarte por WhatsApp. No almacenamos información.
+                            </p>
+                        </form>
+                    </div>
+
+                    <!-- Info de contacto -->
+                    <div class="lg:col-span-5 flex flex-col gap-6">
+                        <div
+                            class="bg-surface-container/80 backdrop-blur-xl p-6 sm:p-8 rounded-2xl shadow-xl flex flex-col gap-6">
+
+                            <div class="flex items-center gap-4">
+                                <img alt="Indira Klehr" class="w-14 h-14 rounded-full object-cover"
+                                    src="assets/images/profile-indira2.jpeg">
+                                <div>
+                                    <span class="font-headline-sm text-headline-sm text-text-primary block">Indira
+                                        Klehr</span>
+                                    <span class="font-label-caps text-label-caps text-gold-metallic">Fundadora • IK
+                                        Sistemas</span>
+                                </div>
+                            </div>
+
+                            <a class="group p-4 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all flex items-center justify-between"
+                                href="mailto:indiklehr@gmail.com">
+                                <div class="flex items-center gap-3.5">
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-surface-elevated text-blue-cyan flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-xl">mail</span>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="font-label-caps text-label-caps text-text-muted uppercase block">Correo
+                                            Oficial</span>
+                                        <span
+                                            class="font-title-card text-title-card text-text-primary">indiklehr@gmail.com</span>
+                                    </div>
+                                </div>
+                                <span class="text-primary group-hover:translate-x-1 transition-transform">→</span>
+                            </a>
+
+                            <div class="p-4 rounded-xl bg-surface-container-low flex items-start gap-3.5">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-surface-elevated text-gold-amber flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-xl">public</span>
+                                </div>
+                                <div>
+                                    <span
+                                        class="font-label-caps text-label-caps text-text-muted uppercase block">Ubicación</span>
+                                    <p class="font-body-default text-body-default text-text-primary font-medium">Entre
+                                        Ríos, Argentina</p>
+                                    <p class="font-body-sm text-body-sm text-text-secondary mt-0.5">Operatividad 100%
+                                        remota.</p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-surface-container-low flex items-start gap-3.5">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-surface-elevated text-service-web flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-xl">bolt</span>
+                                </div>
+                                <div>
+                                    <span
+                                        class="font-label-caps text-label-caps text-text-muted uppercase block">Respuesta</span>
+                                    <div class="flex items-center gap-2 mt-0.5">
+                                        <span class="font-headline-sm text-headline-sm text-gold-metallic">&lt; 2
+                                            Horas</span>
+                                        <span class="font-body-sm text-body-sm text-text-secondary">en horario
+                                            laboral</span>
+                                    </div>
+                                    <p class="font-body-sm text-body-sm text-text-muted mt-0.5">Lun a Vie • 08:30 a
+                                        19:00 ART</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/core/security.js"></script>
+    <script src="js/core/layout.js"></script>
+    <script src="js/core/main.js"></script>
+    <script src="js/modules/contacto.js"></script>
+    <script src="js/modules/legal-modal.js?v=1.0.0"></script> 
+</body>
+
+</html>

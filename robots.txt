@@ -1,0 +1,17 @@
+# ============================================================
+# IK SISTEMAS — robots.txt
+# https://klehrindira.com
+# ============================================================
+
+User-agent: *
+Allow: /
+
+# Bloquear archivos internos
+Disallow: /js/
+Disallow: /css/
+Disallow: /partials/
+Disallow: /.htaccess
+Disallow: /README.md
+
+# Sitemap
+Sitemap: https://klehrindira.com/sitemap.xml

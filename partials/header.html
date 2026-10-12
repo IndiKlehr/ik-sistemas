@@ -1,0 +1,53 @@
+<!-- ============================================================
+     IK SISTEMAS — HEADER COMPARTIDO
+     ============================================================ -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface-glass backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4">
+
+    <div class="flex items-center gap-3">
+      <a class="flex items-center gap-3.5 group" data-path="inicio" href="index.html">
+        <div class="p-0.5 rounded-full bg-surface-container-high transition-transform group-hover:scale-105">
+          <img alt="IK Sistemas Logo"
+               class="w-8 h-8 rounded-full object-cover"
+               src="assets/images/logo-ik.jpg">
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1.5">
+            <span class="font-headline-sm text-headline-sm text-text-primary tracking-tight font-bold">IK SISTEMAS</span>
+            <span class="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-label-caps border border-emerald-500/20">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>Disponible
+            </span>
+          </div>
+          <span class="font-label-caps text-label-caps text-gold-metallic tracking-wider">By Klehr Indira Ayelén</span>
+        </div>
+      </a>
+    </div>
+
+    <nav id="main-nav" class="hidden lg:flex items-center gap-1 bg-surface-container-lowest/40 p-1.5 rounded-xl">
+      <a class="px-4 py-2 font-label-interactive text-label-interactive text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="inicio" href="index.html">Inicio</a>
+      <a class="px-4 py-2 font-label-interactive text-label-interactive text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="servicios" href="servicios.html">Servicios</a>
+      <a class="px-4 py-2 font-label-interactive text-label-interactive text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="casos-de-exito" href="casos-de-exito.html">Casos de Éxito</a>
+      <a class="px-4 py-2 font-label-interactive text-label-interactive text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="sobre-mi" href="sobremi.html">Sobre Mí</a>
+      <a class="px-4 py-2 font-label-interactive text-label-interactive text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="contacto" href="contacto.html">Contacto</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-blue-electric hover:bg-surface-tint font-label-interactive text-label-interactive text-text-primary hover:text-on-primary-fixed shadow-[0_0_20px_rgba(37,99,235,0.35)] transition-all duration-300"
+         data-path="contacto" href="contacto.html">Consultar Proyecto</a>
+      <button aria-label="Abrir menú" id="mobile-menu-btn"
+              class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary transition-colors" type="button">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden lg:hidden bg-surface-glass backdrop-blur-xl border-t border-surface-container-high">
+    <div class="px-6 py-4 flex flex-col gap-1">
+      <a class="px-4 py-2.5 rounded-lg font-label-interactive text-label-interactive text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="index.html">Inicio</a>
+      <a class="px-4 py-2.5 rounded-lg font-label-interactive text-label-interactive text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="servicios.html">Servicios</a>
+      <a class="px-4 py-2.5 rounded-lg font-label-interactive text-label-interactive text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="casos-de-exito.html">Casos de Éxito</a>
+      <a class="px-4 py-2.5 rounded-lg font-label-interactive text-label-interactive text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="sobremi.html">Sobre Mí</a>
+      <a class="px-4 py-2.5 rounded-lg font-label-interactive text-label-interactive text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="contacto.html">Contacto</a>
+    </div>
+  </div>
+</header>
