@@ -1,9 +1,37 @@
 # ============================================================
-# IK SISTEMAS — Seguridad y cabeceras HTTP
-# Colocar en la raíz del sitio
+# IK SISTEMAS — .htaccess
+# Dominio: klehrindira.com
+# Servidor: Hostinger (Apache)
 # ============================================================
 
-# --- Cabeceras de seguridad ---
+
+# ════════════════════════════════════════════════════════════
+# 1. REWRITES (HTTPS + WWW + URLs limpias)
+# ════════════════════════════════════════════════════════════
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # --- Forzar HTTPS (descomentar cuando tengas SSL activo) ---
+  # RewriteCond %{HTTPS} off
+  # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # --- Forzar no-WWW (klehrindira.com en vez de www.klehrindira.com) ---
+  # Descomentar si querés que siempre sea sin www
+  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  # RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+  # --- URLs limpias (quitar .html) ---
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^(.*)$ $1.html [NC,L]
+</IfModule>
+
+
+# ════════════════════════════════════════════════════════════
+# 2. CABECERAS HTTP DE SEGURIDAD
+# ════════════════════════════════════════════════════════════
+
 <IfModule mod_headers.c>
   # Evita clickjacking (que te embeban en un iframe)
   Header always set X-Frame-Options "SAMEORIGIN"
@@ -11,7 +39,7 @@
   # Evita MIME sniffing (que interpreten un .txt como .js)
   Header always set X-Content-Type-Options "nosniff"
 
-  # Fuerza HTTPS por 1 año
+  # Fuerza HTTPS por 1 año (activar solo cuando tengas SSL)
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 
   # No filtrar la URL de origen
@@ -20,47 +48,65 @@
   # Bloquear permisos innecesarios
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
 
-  # CSP: solo permitir scripts de tu propio dominio + CDN de Tailwind y Three.js
+  # CSP: solo permitir scripts de tu propio dominio + CDN confiables
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://ajax.googleapis.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://wa.me; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
 </IfModule>
 
-# --- Bloquear acceso a archivos sensibles ---
+
+# ════════════════════════════════════════════════════════════
+# 3. PROTECCIÓN DE ARCHIVOS SENSIBLES
+# ════════════════════════════════════════════════════════════
+
 <FilesMatch "(^\.|README\.md|package\.json|\.env|\.git|\.htaccess|\.htpasswd|composer\.(json|lock)|yarn\.lock)$">
   Require all denied
 </FilesMatch>
 
-# --- Bloquear navegación de directorios ---
+
+# ════════════════════════════════════════════════════════════
+# 4. BLOQUEAR NAVEGACIÓN DE DIRECTORIOS
+# ════════════════════════════════════════════════════════════
+
 Options -Indexes
 
-# --- Página 404 personalizada ---
+
+# ════════════════════════════════════════════════════════════
+# 5. PÁGINA 404 PERSONALIZADA
+# ════════════════════════════════════════════════════════════
+
 ErrorDocument 404 /404.html
 
-# --- Forzar HTTPS (descomentar si ya tenés certificado SSL) ---
-# RewriteEngine On
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# --- Forzar WWW o no-WWW (elegí uno) ---
-# RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-# RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+# ════════════════════════════════════════════════════════════
+# 6. COMPRESIÓN GZIP
+# ════════════════════════════════════════════════════════════
 
-# --- Compresión GZIP ---
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>
 
-# --- Caché de assets estáticos ---
+
+# ════════════════════════════════════════════════════════════
+# 7. CACHÉ DE ASSETS ESTÁTICOS
+# ════════════════════════════════════════════════════════════
+
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType image/svg+xml "access plus 1 month"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType text/html                 "access plus 1 hour"
+  ExpiresByType text/css                  "access plus 1 month"
+  ExpiresByType application/javascript    "access plus 1 month"
+  ExpiresByType image/svg+xml             "access plus 1 month"
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 1 year"
+  ExpiresByType image/webp                "access plus 1 year"
+  ExpiresByType image/x-icon              "access plus 1 year"
+  ExpiresByType video/mp4                 "access plus 1 year"
 </IfModule>
 
-# --- Bloquear métodos HTTP inseguros ---
+
+# ════════════════════════════════════════════════════════════
+# 8. BLOQUEAR MÉTODOS HTTP INSEGUROS
+# ════════════════════════════════════════════════════════════
+
 <LimitExcept GET POST HEAD OPTIONS>
   Require all denied
 </LimitExcept>
