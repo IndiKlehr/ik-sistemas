@@ -1,11 +1,5 @@
 /* ============================================================
    IK SISTEMAS — FORMULARIO DE CONTACTO
-   - Sanitización en vivo (anti-XSS, anti-inyección)
-   - Permite espacios, saltos de línea y tildes en la consulta
-   - Validación por campo con feedback visual
-   - Cartelito de error debajo del botón
-   - Botón deshabilitado hasta que todo esté OK
-   - Envío por WhatsApp con mensaje pre-armado
    ============================================================ */
 
 (function () {
@@ -15,33 +9,24 @@
      UTILIDADES DE SANITIZACIÓN
      ---------------------------------------------------------- */
 
-  /**
-   * Sanitiza texto de un input simple (nombre, apellido, email).
-   * Quita < >, javascript:, on*=. NO permite saltos de línea.
-   */
   function sanitizeInput(str) {
     return String(str)
       .replace(/[<>]/g, '')
       .replace(/javascript:/gi, '')
       .replace(/on\w+=/gi, '')
-      .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '') // quita controles EXCEPTO \t (09) y \n (0A)
-      .replace(/\s+/g, ' ')   // colapsa espacios múltiples en uno solo
-      .trim();
+      .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '')
+      .replace(/\s+/g, ' ');
+    // SIN trim() — el trim() se hace al validar/enviar
   }
 
-  /**
-   * Sanitiza texto de un textarea (consulta).
-   * Permite saltos de línea (\n), tabs (\t) y espacios múltiples.
-   * NO permite < >, javascript:, on*=.
-   */
   function sanitizeTextarea(str) {
     return String(str)
       .replace(/[<>]/g, '')
       .replace(/javascript:/gi, '')
       .replace(/on\w+=/gi, '')
-      .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '') // quita controles EXCEPTO \t y \n
-      .replace(/\n{3,}/g, '\n\n')  // colapsa 3+ saltos seguidos en 2
-      .trim();
+      .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '')
+      .replace(/\n{3,}/g, '\n\n');
+    // SIN trim() — el trim() se hace al validar/enviar
   }
 
   function isValidEmail(str) {
@@ -49,11 +34,6 @@
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(str);
   }
 
-  /**
-   * Aplica sanitización en vivo.
-   * @param {HTMLInputElement|HTMLTextAreaElement} el
-   * @param {'input'|'textarea'} type
-   */
   function attachLiveSanitizer(el, type) {
     if (!el) return;
     const sanitizer = type === 'textarea' ? sanitizeTextarea : sanitizeInput;
@@ -65,7 +45,6 @@
       if (cleaned !== original) {
         const cursorPos = el.selectionStart;
         el.value = cleaned;
-        // Restaurar cursor lo más cerca posible
         const diff = original.length - cleaned.length;
         const newPos = Math.max(0, cursorPos - diff);
         try { el.setSelectionRange(newPos, newPos); } catch (e) {}
@@ -100,17 +79,13 @@
 
     let isVerified = false;
 
-    /* --------------------------------------------------------
-       1. Sanitización en vivo
-       -------------------------------------------------------- */
+    /* 1. Sanitización en vivo */
     attachLiveSanitizer(inputName,     'input');
     attachLiveSanitizer(inputLastName, 'input');
     attachLiveSanitizer(inputEmail,    'input');
     attachLiveSanitizer(inputDetails,  'textarea');
 
-    /* --------------------------------------------------------
-       2. Contador de caracteres
-       -------------------------------------------------------- */
+    /* 2. Contador de caracteres */
     if (charCounter && inputDetails) {
       const updateCounter = () => {
         charCounter.textContent = `${inputDetails.value.length} / 800`;
@@ -119,9 +94,7 @@
       updateCounter();
     }
 
-    /* --------------------------------------------------------
-       3. Feedback visual (cartelito)
-       -------------------------------------------------------- */
+    /* 3. Feedback visual */
     function showFeedback(type, title, msg) {
       const styles = {
         error:   { box: 'bg-red-500/10 border-red-500/30',         icon: 'text-red-400',    sym: 'error' },
@@ -140,11 +113,9 @@
       feedback.className = 'hidden items-start gap-3 p-4 rounded-xl border transition-all';
     }
 
-    /* --------------------------------------------------------
-       4. Validación por campo
-       -------------------------------------------------------- */
+    /* 4. Validación por campo — CON trim() acá */
     function validateName() {
-      const v = sanitizeInput(inputName.value);
+      const v = sanitizeInput(inputName.value).trim();
       if (!v) return { ok: false, msg: 'Ingresá tu nombre para continuar.' };
       if (v.length < 2) return { ok: false, msg: 'El nombre debe tener al menos 2 letras.' };
       if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s'.-]+$/.test(v)) return { ok: false, msg: 'El nombre solo admite letras y espacios.' };
@@ -152,7 +123,7 @@
     }
 
     function validateLastName() {
-      const v = sanitizeInput(inputLastName.value);
+      const v = sanitizeInput(inputLastName.value).trim();
       if (!v) return { ok: false, msg: 'Ingresá tu apellido para continuar.' };
       if (v.length < 2) return { ok: false, msg: 'El apellido debe tener al menos 2 letras.' };
       if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s'.-]+$/.test(v)) return { ok: false, msg: 'El apellido solo admite letras y espacios.' };
@@ -160,22 +131,20 @@
     }
 
     function validateEmail() {
-      const v = sanitizeInput(inputEmail.value);
+      const v = sanitizeInput(inputEmail.value).trim();
       if (!v) return { ok: true };
       if (!isValidEmail(v)) return { ok: false, msg: 'El correo ingresado no parece válido.' };
       return { ok: true };
     }
 
     function validateDetails() {
-      const v = sanitizeTextarea(inputDetails.value);
+      const v = sanitizeTextarea(inputDetails.value).trim();
       if (!v) return { ok: false, msg: 'Contame tu consulta para poder ayudarte.' };
       if (v.length < 10) return { ok: false, msg: 'La consulta debe tener al menos 10 caracteres.' };
       return { ok: true };
     }
 
-    /* --------------------------------------------------------
-       5. Validar todo
-       -------------------------------------------------------- */
+    /* 5. Validar todo */
     function validateAll(options = {}) {
       const showErrors = options.showErrors === true;
 
@@ -209,9 +178,7 @@
       return { ok: true };
     }
 
-    /* --------------------------------------------------------
-       6. Refrescar estado
-       -------------------------------------------------------- */
+    /* 6. Refrescar estado */
     function refreshState(showErrors = false) {
       const result = validateAll({ showErrors });
 
@@ -230,21 +197,16 @@
           showFeedback('error', 'Revisá los datos', result.error.msg);
         }
       }
-      // Si es reason === 'fields' y showErrors, el cartel ya se mostró en validateAll
     }
 
-    /* --------------------------------------------------------
-       7. Listeners de inputs
-       -------------------------------------------------------- */
+    /* 7. Listeners de inputs */
     [inputName, inputLastName, inputEmail, inputDetails].forEach((el) => {
       if (!el) return;
       el.addEventListener('input', () => refreshState(false));
       el.addEventListener('blur',  () => refreshState(true));
     });
 
-    /* --------------------------------------------------------
-       8. Captcha
-       -------------------------------------------------------- */
+    /* 8. Captcha */
     function verifyCaptcha() {
       if (isVerified) return;
       isVerified = true;
@@ -270,9 +232,7 @@
       });
     }
 
-    /* --------------------------------------------------------
-       9. Envío por WhatsApp
-       -------------------------------------------------------- */
+    /* 9. Envío por WhatsApp — CON trim() acá */
     btnSend.addEventListener('click', () => {
       const result = validateAll({ showErrors: true });
       if (!result.ok) {
@@ -281,17 +241,17 @@
       }
 
       const data = {
-        name:     sanitizeInput(inputName.value),
-        lastName: sanitizeInput(inputLastName.value),
-        email:    sanitizeInput(inputEmail.value),
-        details:  sanitizeTextarea(inputDetails.value),
+        name:     sanitizeInput(inputName.value).trim(),
+        lastName: sanitizeInput(inputLastName.value).trim(),
+        email:    sanitizeInput(inputEmail.value).trim(),
+        details:  sanitizeTextarea(inputDetails.value).trim(),
       };
 
       const fullName = `${data.name} ${data.lastName}`.trim();
       let msg = `Hola Indira! Soy *${fullName}*.\n\n`;
       msg += `📝 *Consulta:*\n"${data.details}"\n`;
       if (data.email) msg += `\n✉️ *Correo:* ${data.email}`;
-      msg += `\n\n_Enviado desde iksistemas.com_`;
+      msg += `\n\n_Enviado desde klehrindira.com_`;
 
       const url = `https://wa.me/5493434165613?text=${encodeURIComponent(msg)}`;
       window.open(url, '_blank', 'noopener,noreferrer');
@@ -302,9 +262,7 @@
       btnSend.click();
     });
 
-    /* --------------------------------------------------------
-       10. Estado inicial
-       -------------------------------------------------------- */
+    /* 10. Estado inicial */
     refreshState(false);
   }
 
