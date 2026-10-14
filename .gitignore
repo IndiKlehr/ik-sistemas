@@ -17,3 +17,5 @@ package-lock.json
 # Secretos
 .env
 .env.local
+
+codigoagregarproyecto.html
