@@ -6,7 +6,7 @@
 
 
 # ════════════════════════════════════════════════════════════
-# 1. REWRITES (HTTPS + WWW + URLs limpias)
+# 1. REWRITES (HTTPS + WWW + URLs limpias + redirecciones)
 # ════════════════════════════════════════════════════════════
 
 <IfModule mod_rewrite.c>
@@ -24,7 +24,12 @@
   # --- URLs limpias (quitar .html) ---
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteCond %{REQUEST_URI} !\.html$
   RewriteRule ^(.*)$ $1.html [NC,L]
+
+  # --- Redirigir .html a la versión sin extensión ---
+  RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+  RewriteRule ^ /%1 [NC,L,R=301]
 </IfModule>
 
 
@@ -33,22 +38,11 @@
 # ════════════════════════════════════════════════════════════
 
 <IfModule mod_headers.c>
-  # Evita clickjacking (que te embeban en un iframe)
   Header always set X-Frame-Options "SAMEORIGIN"
-
-  # Evita MIME sniffing (que interpreten un .txt como .js)
   Header always set X-Content-Type-Options "nosniff"
-
-  # Fuerza HTTPS por 1 año (activar solo cuando tengas SSL)
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
-
-  # No filtrar la URL de origen
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
-
-  # Bloquear permisos innecesarios
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
-
-  # CSP: solo permitir scripts de tu propio dominio + CDN confiables
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://ajax.googleapis.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://wa.me; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
 </IfModule>
 

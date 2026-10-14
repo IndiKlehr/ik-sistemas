@@ -21,7 +21,7 @@
   }
 
   function markActivePage() {
-    const path = window.location.pathname.split('/').pop() || 'index.html';
+    const path = window.location.pathname.split('/').pop() || '/';
     const pageKey = path.replace('.html', '') || 'inicio';
 
     const MAP = {
