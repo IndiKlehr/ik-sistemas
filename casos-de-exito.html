@@ -9,15 +9,15 @@
   <title>Casos de Éxito | IK Sistemas</title>
   <meta name="description"
     content="Portfolio de sistemas, sitios web, identidades visuales e invitaciones digitales desarrolladas por IK Sistemas.">
-<!-- Favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="shortcut icon" href="/favicon.ico">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="shortcut icon" href="/favicon.ico">
 
-<meta property="og:title" content="IK Sistemas — Soluciones Digitales a Medida">
-<meta property="og:description" content="Sistemas, webs, marcas e invitaciones digitales hechas a medida.">
+  <meta property="og:title" content="IK Sistemas — Soluciones Digitales a Medida">
+  <meta property="og:description" content="Sistemas, webs, marcas e invitaciones digitales hechas a medida.">
 
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
@@ -28,7 +28,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="css/main.css?v=1.0.0">
-  <link rel="stylesheet" href="css/components.css?v=1.0.0">
+  <link rel="stylesheet" href="css/components.css?v=1.0.2">
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script src="js/config/tailwind-config.js?v=1.0.0"></script>
@@ -62,48 +62,57 @@
 
             <h1
               class="font-display-hero text-headline-lg lg:text-display-hero text-text-primary tracking-tight max-w-4xl">
-              MIS 
+              MIS
               <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-cyan via-primary to-gold-light">PROYECTOS</span>
             </h1>
 
             <p class="font-body-lead text-body-lead text-text-secondary max-w-2xl mt-5">
               Cada proyecto tiene una idea, una necesidad y una solución diferente.
-Conocé algunos de los trabajos que fui creando: páginas web, herramientas digitales e identidades visuales pensadas para cada proyecto.
+              Conocé algunos de los trabajos que fui creando: páginas web, herramientas digitales e identidades visuales
+              pensadas para cada proyecto.
             </p>
           </div>
         </section>
 
         <!-- ============================================================
-             PROYECTO PRINCIPAL DESTACADO — WEB HERRERÍA
+             PROYECTO PRINCIPAL DESTACADO — MÍMATE SIEMPRE ESTÉTICA
              ============================================================ -->
         <section class="max-w-7xl mx-auto px-6 lg:px-12 w-full relative z-10 pt-2 pb-8">
 
           <div class="flex items-center justify-between mb-8">
             <div class="flex items-center gap-3">
               <span class="w-10 h-1 rounded-full bg-gold-metallic"></span>
-              <span class="font-label-caps text-label-caps text-gold-metallic uppercase tracking-widest">Caso
-                más reciente</span>
+              <span class="font-label-caps text-label-caps text-gold-metallic uppercase tracking-widest">Proyecto destacado</span>
             </div>
           </div>
 
-          <div class="rounded-2xl bg-surface-container shadow-xl overflow-hidden">
+          <div class="rounded-2xl bg-surface-container shadow-xl overflow-hidden border border-white/5 group">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
 
               <!-- Carrusel -->
               <div class="lg:col-span-7 bg-surface-container-low">
-                <div class="carousel relative aspect-video w-full overflow-hidden bg-surface-container-lowest"
+                <div class="carousel relative aspect-video w-full overflow-hidden bg-surface-container-lowest carousel-frame"
                   data-images='[
-                       "assets/images/portfolio/webherreria/1.jpeg",
-                       "assets/images/portfolio/webherreria/2.jpeg",
-                       "assets/images/portfolio/webherreria/3.png",
-                       "assets/images/portfolio/webherreria/4.png",
-                       "assets/images/portfolio/webherreria/5.png"
+                       "assets/images/portfolio/mimatesiempre/1.jpeg",
+                       "assets/images/portfolio/mimatesiempre/2.jpeg",
+                       "assets/images/portfolio/mimatesiempre/3.jpeg"
                      ]' data-autoplay="5000">
 
-                  <div class="carousel-viewport relative w-full h-full">
+                  <div class="carousel-blur-bg absolute inset-0 pointer-events-none"></div>
+
+                  <!-- Badge NEW -->
+                  <div class="absolute top-4 right-16 z-40">
+                    <span
+                      class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-gold-metallic to-gold-amber text-surface font-label-caps text-[0.65rem] font-bold uppercase tracking-wider shadow-lg">
+                      <span class="w-1.5 h-1.5 rounded-full bg-surface animate-pulse"></span>
+                      New
+                    </span>
+                  </div>
+
+                  <div class="carousel-viewport relative w-full h-full z-20">
                     <img
-                      class="carousel-image w-full h-full object-cover object-top transition-opacity duration-500 absolute inset-0 opacity-0"
-                      alt="Web Herrería El Ruso">
+                      class="carousel-image w-full h-full object-contain object-center transition-opacity duration-500 absolute inset-0 opacity-0 p-4"
+                      alt="Mímate Siempre Estética - Sitio Web">
                   </div>
 
                   <!-- Barra tipo navegador -->
@@ -112,7 +121,7 @@ Conocé algunos de los trabajos que fui creando: páginas web, herramientas digi
                     <div class="w-2.5 h-2.5 rounded-full bg-error"></div>
                     <div class="w-2.5 h-2.5 rounded-full bg-gold-amber"></div>
                     <div class="w-2.5 h-2.5 rounded-full bg-service-web"></div>
-                    <span class="text-xs text-text-muted font-mono ml-2">https://herreriaelruso.netlify.app/</span>
+                    <span class="text-xs text-text-muted font-mono ml-2">https://mimatesiempre-estetica.netlify.app/</span>
                   </div>
 
                   <div
@@ -126,7 +135,7 @@ Conocé algunos de los trabajos que fui creando: páginas web, herramientas digi
 
                   <span
                     class="carousel-counter absolute top-12 right-4 font-label-caps text-label-caps px-2.5 py-1 rounded-full bg-surface-base/70 backdrop-blur-md text-text-primary z-20">
-                    1 / 5
+                    1 / 3
                   </span>
 
                   <button type="button" aria-label="Imagen anterior"
@@ -156,12 +165,12 @@ Conocé algunos de los trabajos que fui creando: páginas web, herramientas digi
 
                   <h2
                     class="font-headline-lg text-headline-md lg:text-headline-lg text-text-primary tracking-tight mb-4">
-                    Herrería "El Ruso" • Sitio Web
+                    Mímate Siempre Estética • Sitio Web
                   </h2>
 
                   <p class="font-body-default text-body-default text-text-secondary mb-6 leading-relaxed">
-                    Sitio web institucional para taller de herrería. Diseño moderno y responsive que presenta servicios,
-                    galería de trabajos y canal de contacto directo para presupuestos.
+                    Sitio web institucional para centro de estética en Crespo. Diseño elegante y moderno que presenta
+                    tratamientos, galería de resultados y reserva de turnos por WhatsApp.
                   </p>
 
                   <div class="space-y-2.5 mb-6">
@@ -172,13 +181,13 @@ Conocé algunos de los trabajos que fui creando: páginas web, herramientas digi
                     </div>
                     <div class="flex items-start gap-2.5">
                       <span class="material-symbols-outlined text-blue-cyan text-base mt-0.5">check_circle</span>
-                      <span class="font-body-sm text-body-sm text-text-primary"><strong>Galería interactiva</strong> de
-                        trabajos por categoría.</span>
+                      <span class="font-body-sm text-body-sm text-text-primary"><strong>Galería de resultados</strong>
+                        y presentación de tratamientos.</span>
                     </div>
                     <div class="flex items-start gap-2.5">
                       <span class="material-symbols-outlined text-blue-cyan text-base mt-0.5">check_circle</span>
-                      <span class="font-body-sm text-body-sm text-text-primary"><strong>Contacto por WhatsApp</strong>
-                        directo para presupuestos.</span>
+                      <span class="font-body-sm text-body-sm text-text-primary"><strong>Reserva de turnos</strong> por
+                        WhatsApp.</span>
                     </div>
                   </div>
 
@@ -188,8 +197,8 @@ Conocé algunos de los trabajos que fui creando: páginas web, herramientas digi
                       <span class="font-headline-sm text-title-card text-text-primary text-sm">Web Institucional</span>
                     </div>
                     <div>
-                      <span class="font-label-caps text-label-caps text-text-muted block">Entrega</span>
-                      <span class="font-headline-sm text-title-card text-text-primary text-sm">2 Semanas</span>
+                      <span class="font-label-caps text-label-caps text-text-muted block">Ubicación</span>
+                      <span class="font-headline-sm text-title-card text-text-primary text-sm">Crespo, ER</span>
                     </div>
                     <div>
                       <span class="font-label-caps text-label-caps text-text-muted block">Estado</span>
@@ -198,7 +207,12 @@ Conocé algunos de los trabajos que fui creando: páginas web, herramientas digi
                   </div>
                 </div>
 
-                <div class="mt-8 pt-6 border-t border-white/5">
+                <div class="mt-8 pt-6 border-t border-white/5 flex items-center justify-between gap-3 flex-wrap">
+                  <a href="https://mimatesiempre-estetica.netlify.app/" target="_blank" rel="noopener"
+                    class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-service-web hover:brightness-110 text-white font-label-interactive text-label-interactive font-bold transition-all text-sm">
+                    <span class="material-symbols-outlined text-base">open_in_new</span>
+                    Ver sitio
+                  </a>
                   <a href="/contacto"
                     class="inline-flex items-center gap-2 text-sm font-label-interactive text-primary hover:text-gold-light transition-colors">
                     Consultar proyecto similar
@@ -247,67 +261,72 @@ Conocé algunos de los trabajos que fui creando: páginas web, herramientas digi
             </div>
           </div>
 
+          <!-- GRID -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             <!-- ════════════════════════════════════════════
-     CARD 1: INVITACIÓN DE BODA (con video)
-     ════════════════════════════════════════════ -->
+                 CARD 1: INVITACIÓN DE BODA (con video)
+                 ════════════════════════════════════════════ -->
             <div
-              class="portfolio-card rounded-2xl bg-surface-container overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300 flex flex-col"
+              class="portfolio-card rounded-2xl bg-surface-container overflow-hidden border border-white/5 flex flex-col group"
               data-category="invitaciones">
 
-              <div class="carousel relative h-60 overflow-hidden bg-surface-container-lowest"
+              <div class="carousel relative h-72 sm:h-80 overflow-hidden bg-surface-container-lowest carousel-frame"
                 data-video="assets/videos/videoboda.mp4" data-autoplay="5000">
 
-                <div class="carousel-viewport relative w-full h-full">
-                  <img
-                    class="carousel-image w-full h-full object-cover transition-opacity duration-500 absolute inset-0 opacity-0"
-                    alt="Invitación Web de Boda">
-                </div>
-
+                <div class="carousel-blur-bg absolute inset-0 pointer-events-none"></div>
+                <div class="absolute inset-x-0 top-0 h-20 carousel-top-overlay pointer-events-none z-10"></div>
                 <div
                   class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface-container to-transparent pointer-events-none z-10">
                 </div>
 
+                <div class="carousel-viewport relative w-full h-full z-20">
+                  <img
+                    class="carousel-image w-full h-full object-contain object-center transition-opacity duration-500 absolute inset-0 opacity-0 p-3"
+                    alt="Invitación Web de Boda">
+                </div>
+
                 <span
-                  class="absolute top-4 left-4 font-label-caps text-label-caps px-3 py-1 rounded-full bg-service-invitations/80 text-white backdrop-blur-md uppercase tracking-wider z-20">
+                  class="absolute top-4 left-4 font-label-caps text-label-caps px-3 py-1 rounded-full bg-service-invitations/85 text-white backdrop-blur-md uppercase tracking-wider z-30">
                   Invitación Web
                 </span>
 
-                <!-- Badge "VIDEO" para el primer slide -->
                 <span
-                  class="carousel-video-badge absolute top-4 right-16 font-label-caps text-label-caps px-2 py-0.5 rounded bg-red-500/90 text-white backdrop-blur-md uppercase tracking-wider z-20 flex items-center gap-1">
+                  class="carousel-video-badge absolute top-4 right-16 font-label-caps text-label-caps px-2 py-0.5 rounded bg-red-500/90 text-white backdrop-blur-md uppercase tracking-wider z-30 flex items-center gap-1">
                   <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
                   Video
                 </span>
 
                 <span
-                  class="carousel-counter absolute top-4 right-4 font-label-caps text-label-caps px-2.5 py-1 rounded-full bg-surface-base/70 backdrop-blur-md text-text-primary z-20">
+                  class="carousel-counter absolute top-4 right-4 font-label-caps text-label-caps px-2.5 py-1 rounded-full bg-surface-base/70 backdrop-blur-md text-text-primary z-30">
                   1 / 3
                 </span>
 
                 <button type="button" aria-label="Anterior"
-                  class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20 cursor-pointer">
-                  <span class="material-symbols-outlined text-lg">chevron_left</span>
+                  class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-30 cursor-pointer">
+                  <span class="material-symbols-outlined text-xl">chevron_left</span>
                 </button>
 
                 <button type="button" aria-label="Siguiente"
-                  class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20 cursor-pointer">
-                  <span class="material-symbols-outlined text-lg">chevron_right</span>
+                  class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-30 cursor-pointer">
+                  <span class="material-symbols-outlined text-xl">chevron_right</span>
                 </button>
 
-                <div class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-20">
+                <div class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-30">
                 </div>
               </div>
 
               <div class="p-6 flex flex-col flex-1">
-                <div class="flex items-center justify-between mb-2">
-                  <h3 class="font-headline-sm text-headline-sm text-text-primary font-semibold">Invitación Web de Boda
+                <div class="flex items-start justify-between gap-3 mb-2">
+                  <h3 class="font-headline-sm text-headline-sm text-text-primary font-semibold leading-snug">
+                    Invitación Web de Boda
                   </h3>
-                  <span class="text-xs text-text-muted font-mono">Eventos</span>
+                  <span class="text-xs text-text-muted font-mono shrink-0 pt-0.5">Eventos</span>
                 </div>
                 <p class="font-body-default text-body-sm text-text-secondary mb-4 leading-relaxed flex-1">
-                 Una invitación digital personalizada con cuenta regresiva, confirmación de asistencia y ubicación del evento. También puede incluir opciones especiales, como playlist colaborativa y galería para compartir fotos, según el modelo contratado.
+                  Una invitación digital personalizada con cuenta regresiva, confirmación de asistencia y ubicación del
+                  evento. También puede incluir opciones especiales, como playlist colaborativa y galería para compartir
+                  fotos, según el modelo contratado.
                 </p>
                 <div class="flex flex-wrap gap-2 pt-2">
                   <span
@@ -318,7 +337,6 @@ Conocé algunos de los trabajos que fui creando: páginas web, herramientas digi
                   <span
                     class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
                     <span class="material-symbols-outlined text-xs text-gold-metallic">how_to_reg</span> Confirmación
-                    de Asistencia
                   </span>
                   <span
                     class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
@@ -327,7 +345,7 @@ Conocé algunos de los trabajos que fui creando: páginas web, herramientas digi
                 </div>
               </div>
 
-              <div class="p-6 pt-0 flex items-center justify-between gap-3 flex-wrap">
+              <div class="p-6 pt-0 flex items-center justify-between gap-3 flex-wrap mt-auto">
                 <a href="/invitaciones"
                   class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-service-invitations hover:brightness-110 text-surface-base font-label-interactive text-label-interactive font-bold transition-all text-sm">
                   <span class="material-symbols-outlined text-base">visibility</span>
@@ -343,262 +361,62 @@ Conocé algunos de los trabajos que fui creando: páginas web, herramientas digi
             </div>
 
             <!-- ════════════════════════════════════════════
-                 CARD 2: ENTERRIANITOS
+                 CARD 2: WEB HERRERÍA
                  ════════════════════════════════════════════ -->
             <div
-              class="portfolio-card rounded-2xl bg-surface-container overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300 flex flex-col"
-              data-category="identidad">
-
-              <div class="carousel relative h-60 overflow-hidden bg-surface-container-lowest"
-                data-images='["assets/images/portfolio/entrerrianitos/1.png"]' data-autoplay="0">
-                <div class="carousel-viewport relative w-full h-full">
-                  <img
-                    class="carousel-image w-full h-full object-cover transition-opacity duration-500 absolute inset-0 opacity-0"
-                    alt="Enterrianitos Descartables">
-                </div>
-                <div
-                  class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface-container to-transparent pointer-events-none z-10">
-                </div>
-                <span
-                  class="absolute top-4 left-4 font-label-caps text-label-caps px-3 py-1 rounded-full bg-service-branding/80 text-white backdrop-blur-md uppercase tracking-wider z-20">
-                  Identidad Visual
-                </span>
-              </div>
-
-              <div class="p-6 flex flex-col flex-1">
-                <div class="flex items-center justify-between mb-2">
-                  <h3 class="font-headline-sm text-headline-sm text-text-primary font-semibold">Enterrianitos
-                    Descartables</h3>
-                  <span class="text-xs text-text-muted font-mono">Entre Ríos, ARG</span>
-                </div>
-                <p class="font-body-default text-body-sm text-text-secondary mb-4 leading-relaxed flex-1">
-                  Identidad completa para distribuidora de insumos descartables.
-                </p>
-                <div class="flex flex-wrap gap-2 pt-2">
-                  <span
-                    class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
-                    <span class="material-symbols-outlined text-xs text-gold-metallic">design_services</span> Logotipo
-                  </span>
-                </div>
-              </div>
-
-              <div class="p-6 pt-0 flex items-center justify-between">
-                <span class="font-body-sm text-xs text-gold-metallic font-semibold">• A su medida</span>
-                <a href="/contacto"
-                  class="font-label-interactive text-label-interactive text-primary hover:text-gold-light inline-flex items-center gap-1 text-sm">
-                  Consultar identidad
-                  <span
-                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                </a>
-              </div>
-            </div>
-            <!-- ════════════════════════════════════════════
-            CARD:3 AGRO.IK — App Web Mobile
-            ════════════════════════════════════════════ -->
-            <div
-              class="portfolio-card rounded-2xl bg-surface-container overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300 flex flex-col"
+              class="portfolio-card rounded-2xl bg-surface-container overflow-hidden border border-white/5 flex flex-col group"
               data-category="web">
 
-              <div class="carousel relative h-60 overflow-hidden bg-surface-container-lowest" data-images='[
-         "assets/images/portfolio/agro-ik/1-login.jpeg",
-         "assets/images/portfolio/agro-ik/2-formulario.jpeg",
-         "assets/images/portfolio/agro-ik/3-sheets.jpeg",
-         "assets/images/portfolio/agro-ik/inicio.jpeg"
-       ]' data-autoplay="5000">
-                <div class="carousel-viewport relative w-full h-full">
-                  <img
-                    class="carousel-image w-full h-full object-cover object-center transition-opacity duration-500 absolute inset-0 opacity-0"
-                    alt="AGRO.IK - App Web Mobile">
-                </div>
-
-                <div
-                  class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface-container to-transparent pointer-events-none z-10">
-                </div>
-
-                <span
-                  class="absolute top-4 left-4 font-label-caps text-label-caps px-3 py-1 rounded-full bg-service-web/80 text-white backdrop-blur-md uppercase tracking-wider z-20">
-                  App Web Mobile
-                </span>
-
-                <span
-                  class="carousel-counter absolute top-4 right-4 font-label-caps text-label-caps px-2.5 py-1 rounded-full bg-surface-base/70 backdrop-blur-md text-text-primary z-20">
-                  1 / 3
-                </span>
-
-                <button type="button" aria-label="Imagen anterior"
-                  class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20 cursor-pointer">
-                  <span class="material-symbols-outlined text-lg">chevron_left</span>
-                </button>
-
-                <button type="button" aria-label="Imagen siguiente"
-                  class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20 cursor-pointer">
-                  <span class="material-symbols-outlined text-lg">chevron_right</span>
-                </button>
-
-                <div class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-20">
-                </div>
-              </div>
-
-              <div class="p-6 flex flex-col flex-1">
-                <div class="flex items-center justify-between mb-2">
-                  <h3 class="font-headline-sm text-headline-sm text-text-primary font-semibold">
-                    AGRO.IK — Registro Agro
-                  </h3>
-                  <span class="text-xs text-text-muted font-mono">Agro</span>
-                </div>
-
-                <p class="font-body-default text-body-sm text-text-secondary mb-4 leading-relaxed flex-1">
-                  Una aplicación web adaptable al celular para registrar los trabajos agrícolas del día y guardar los datos en Google Sheets, facilitando el seguimiento de las tareas. 
-
-                <div class="flex flex-wrap gap-2 pt-2">
-                  <span
-                    class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
-                    <span class="material-symbols-outlined text-xs text-blue-cyan">smartphone</span> Mobile-first
-                  </span>
-                  <span
-                    class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
-                    <span class="material-symbols-outlined text-xs text-gold-metallic">sync</span> Google Sheets
-                  </span>
-                  <span
-                    class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
-                    <span class="material-symbols-outlined text-xs text-blue-cyan">agriculture</span> Multi-cultivo
-                  </span>
-                </div>
-              </div>
-
-              <div class="p-6 pt-0 flex items-center justify-between">
-                <span class="font-body-sm text-xs text-blue-cyan font-semibold">
-                  • Sin planillas manuales
-                </span>
-                <a href="/contacto"
-                  class="font-label-interactive text-label-interactive text-primary hover:text-gold-light inline-flex items-center gap-1 text-sm">
-                  Consultar por similares
-                  <span
-                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                </a>
-              </div>
-            </div>
-            <!-- ════════════════════════════════════════════
-                 CARD 4: ELECTRO-SOLUCIONES
-                 ════════════════════════════════════════════ -->
-            <div
-              class="portfolio-card rounded-2xl bg-surface-container overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300 flex flex-col"
-              data-category="identidad">
-
-              <div class="carousel relative h-60 overflow-hidden bg-surface-container-lowest" data-images='[
-                     "assets/images/portfolio/electrosoluciones/1.png",
-                     "assets/images/portfolio/electrosoluciones/2.png"
-                   ]' data-autoplay="5000">
-                <div class="carousel-viewport relative w-full h-full">
-                  <img
-                    class="carousel-image w-full h-full object-cover transition-opacity duration-500 absolute inset-0 opacity-0"
-                    alt="Electro-Soluciones Industriales">
-                </div>
-                <div
-                  class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface-container to-transparent pointer-events-none z-10">
-                </div>
-                <span
-                  class="absolute top-4 left-4 font-label-caps text-label-caps px-3 py-1 rounded-full bg-service-branding/80 text-white backdrop-blur-md uppercase tracking-wider z-20">
-                  Identidad Visual
-                </span>
-                <span
-                  class="carousel-counter absolute top-4 right-4 font-label-caps text-label-caps px-2.5 py-1 rounded-full bg-surface-base/70 backdrop-blur-md text-text-primary z-20">
-                  1 / 2
-                </span>
-                <button type="button" aria-label="Imagen anterior"
-                  class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20 cursor-pointer">
-                  <span class="material-symbols-outlined text-lg">chevron_left</span>
-                </button>
-                <button type="button" aria-label="Imagen siguiente"
-                  class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20 cursor-pointer">
-                  <span class="material-symbols-outlined text-lg">chevron_right</span>
-                </button>
-                <div class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-20">
-                </div>
-              </div>
-
-              <div class="p-6 flex flex-col flex-1">
-                <div class="flex items-center justify-between mb-2">
-                  <h3 class="font-headline-sm text-headline-sm text-text-primary font-semibold">Electro-Soluciones
-                    Integrales</h3>
-                  <span class="text-xs text-text-muted font-mono"> Electricista</span>
-                </div>
-                <p class="font-body-default text-body-sm text-text-secondary mb-4 leading-relaxed flex-1">
-                  Identidad visual para cliente particular. Diseño de logotipo  y tarjeta
-                  de presentación con aplicaciones para uso digital e impreso.
-                </p>
-                <div class="flex flex-wrap gap-2 pt-2">
-                  <span
-                    class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
-                    <span class="material-symbols-outlined text-xs text-gold-metallic">design_services</span> Logotipo
-                  </span>
-                  <span
-                    class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
-                    <span class="material-symbols-outlined text-xs text-gold-metallic">badge</span> Tarjeta
-                  </span>
-                </div>
-              </div>
-
-              <div class="p-6 pt-0 flex items-center justify-between">
-                <span class="font-body-sm text-xs text-gold-metallic font-semibold">• Sistema gráfico completo</span>
-                <a href="/contacto"
-                  class="font-label-interactive text-label-interactive text-primary hover:text-gold-light inline-flex items-center gap-1 text-sm">
-                  Consultar identidad
-                  <span
-                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                </a>
-              </div>
-            </div>
-
-
-
-            <!-- ════════════════════════════════════════════
-                 CARD 5: WEB HERRERÍA (destacada también acá)
-                 ════════════════════════════════════════════ -->
-            <div
-              class="portfolio-card rounded-2xl bg-surface-container overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300 flex flex-col"
-              data-category="web">
-
-              <div class="carousel relative h-60 overflow-hidden bg-surface-container-lowest" data-images='[
+              <div class="carousel relative h-72 sm:h-80 overflow-hidden bg-surface-container-lowest carousel-frame"
+                data-images='[
                      "assets/images/portfolio/webherreria/1.jpeg",
                      "assets/images/portfolio/webherreria/2.jpeg",
                      "assets/images/portfolio/webherreria/3.png",
                      "assets/images/portfolio/webherreria/4.png",
                      "assets/images/portfolio/webherreria/5.png"
                    ]' data-autoplay="5000">
-                <div class="carousel-viewport relative w-full h-full">
-                  <img
-                    class="carousel-image w-full h-full object-cover transition-opacity duration-500 absolute inset-0 opacity-0"
-                    alt="Web Herrería El Ruso">
-                </div>
+
+                <div class="absolute inset-x-0 top-0 h-20 carousel-top-overlay pointer-events-none z-10"></div>
                 <div
                   class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface-container to-transparent pointer-events-none z-10">
                 </div>
+
+                <div class="carousel-viewport relative w-full h-full z-20">
+                  <img
+                    class="carousel-image w-full h-full object-cover object-top transition-opacity duration-500 absolute inset-0 opacity-0"
+                    alt="Web Herrería El Ruso">
+                </div>
+
                 <span
-                  class="absolute top-4 left-4 font-label-caps text-label-caps px-3 py-1 rounded-full bg-service-web/80 text-white backdrop-blur-md uppercase tracking-wider z-20">
+                  class="absolute top-4 left-4 font-label-caps text-label-caps px-3 py-1 rounded-full bg-service-web/85 text-white backdrop-blur-md uppercase tracking-wider z-30">
                   Portal Web
                 </span>
+
                 <span
-                  class="carousel-counter absolute top-4 right-4 font-label-caps text-label-caps px-2.5 py-1 rounded-full bg-surface-base/70 backdrop-blur-md text-text-primary z-20">
+                  class="carousel-counter absolute top-4 right-4 font-label-caps text-label-caps px-2.5 py-1 rounded-full bg-surface-base/70 backdrop-blur-md text-text-primary z-30">
                   1 / 5
                 </span>
+
                 <button type="button" aria-label="Imagen anterior"
-                  class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20 cursor-pointer">
-                  <span class="material-symbols-outlined text-lg">chevron_left</span>
+                  class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-30 cursor-pointer">
+                  <span class="material-symbols-outlined text-xl">chevron_left</span>
                 </button>
+
                 <button type="button" aria-label="Imagen siguiente"
-                  class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-20 cursor-pointer">
-                  <span class="material-symbols-outlined text-lg">chevron_right</span>
+                  class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-30 cursor-pointer">
+                  <span class="material-symbols-outlined text-xl">chevron_right</span>
                 </button>
-                <div class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-20">
+
+                <div class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-30">
                 </div>
               </div>
 
               <div class="p-6 flex flex-col flex-1">
-                <div class="flex items-center justify-between mb-2">
-                  <h3 class="font-headline-sm text-headline-sm text-text-primary font-semibold">Herrería "El Ruso" •
-                    Sitio Web</h3>
-                  <span class="text-xs text-text-muted font-mono">Metalúrgica</span>
+                <div class="flex items-start justify-between gap-3 mb-2">
+                  <h3 class="font-headline-sm text-headline-sm text-text-primary font-semibold leading-snug">
+                    Herrería "El Ruso" • Sitio Web
+                  </h3>
+                  <span class="text-xs text-text-muted font-mono shrink-0 pt-0.5">Metalúrgica</span>
                 </div>
                 <p class="font-body-default text-body-sm text-text-secondary mb-4 leading-relaxed flex-1">
                   Sitio web institucional con galería de trabajos, presentación de servicios y contacto directo por
@@ -616,8 +434,12 @@ Conocé algunos de los trabajos que fui creando: páginas web, herramientas digi
                 </div>
               </div>
 
-              <div class="p-6 pt-0 flex items-center justify-between">
-                <span class="font-body-sm text-xs text-blue-cyan font-semibold">• Responsive y optimizado</span>
+              <div class="p-6 pt-0 flex items-center justify-between gap-3 flex-wrap mt-auto">
+                <a href="https://herreriaelruso.netlify.app/" target="_blank" rel="noopener"
+                  class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-service-web hover:brightness-110 text-white font-label-interactive text-label-interactive font-bold transition-all text-sm">
+                  <span class="material-symbols-outlined text-base">open_in_new</span>
+                  Ver sitio
+                </a>
                 <a href="/contacto"
                   class="font-label-interactive text-label-interactive text-primary hover:text-gold-light inline-flex items-center gap-1 text-sm">
                   Consultar similar
@@ -627,25 +449,367 @@ Conocé algunos de los trabajos que fui creando: páginas web, herramientas digi
               </div>
             </div>
 
-
-
             <!-- ════════════════════════════════════════════
-                 CARD 6: PLACEHOLDER
+                 CARD 3: MÍMATE SIEMPRE ESTÉTICA (también en el grid)
                  ════════════════════════════════════════════ -->
             <div
-              class="portfolio-card rounded-2xl bg-surface-container overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300 flex flex-col"
+              class="portfolio-card rounded-2xl bg-surface-container overflow-hidden border border-white/5 flex flex-col group relative"
+              data-category="web">
+
+              <!-- Badge NEW -->
+              <div class="absolute top-4 right-16 z-40">
+                <span
+                  class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-gold-metallic to-gold-amber text-surface font-label-caps text-[0.65rem] font-bold uppercase tracking-wider shadow-lg">
+                  <span class="w-1.5 h-1.5 rounded-full bg-surface animate-pulse"></span>
+                  New
+                </span>
+              </div>
+
+              <div class="carousel relative h-72 sm:h-80 overflow-hidden bg-surface-container-lowest carousel-frame"
+                data-images='[
+                  "assets/images/portfolio/mimatesiempre/1.jpeg",
+                  "assets/images/portfolio/mimatesiempre/2.jpeg",
+                  "assets/images/portfolio/mimatesiempre/3.jpeg"
+                ]' data-autoplay="5000">
+
+                <div class="carousel-blur-bg absolute inset-0 pointer-events-none"></div>
+                <div class="absolute inset-x-0 top-0 h-20 carousel-top-overlay pointer-events-none z-10"></div>
+                <div
+                  class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface-container to-transparent pointer-events-none z-10">
+                </div>
+
+                <div class="carousel-viewport relative w-full h-full z-20">
+                  <img
+                    class="carousel-image w-full h-full object-contain object-center transition-opacity duration-500 absolute inset-0 opacity-0 p-3"
+                    alt="Mímate Siempre Estética - Sitio Web">
+                </div>
+
+                <span
+                  class="absolute top-4 left-4 font-label-caps text-label-caps px-3 py-1 rounded-full bg-service-web/85 text-white backdrop-blur-md uppercase tracking-wider z-30">
+                  Portal Web
+                </span>
+
+                <span
+                  class="carousel-counter absolute top-4 right-4 font-label-caps text-label-caps px-2.5 py-1 rounded-full bg-surface-base/70 backdrop-blur-md text-text-primary z-30">
+                  1 / 3
+                </span>
+
+                <button type="button" aria-label="Imagen anterior"
+                  class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-30 cursor-pointer">
+                  <span class="material-symbols-outlined text-xl">chevron_left</span>
+                </button>
+
+                <button type="button" aria-label="Imagen siguiente"
+                  class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-30 cursor-pointer">
+                  <span class="material-symbols-outlined text-xl">chevron_right</span>
+                </button>
+
+                <div class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-30">
+                </div>
+              </div>
+
+              <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-start justify-between gap-3 mb-2">
+                  <h3 class="font-headline-sm text-headline-sm text-text-primary font-semibold leading-snug">
+                    Mímate Siempre Estética
+                  </h3>
+                  <span class="text-xs text-text-muted font-mono shrink-0 pt-0.5">Estética · Crespo</span>
+                </div>
+                <p class="font-body-default text-body-sm text-text-secondary mb-4 leading-relaxed flex-1">
+                  Sitio web institucional para centro de estética en Crespo. Diseño elegante y moderno que presenta
+                  tratamientos, galería de resultados y reserva de turnos por WhatsApp.
+                </p>
+                <div class="flex flex-wrap gap-2 pt-2">
+                  <span
+                    class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
+                    <span class="material-symbols-outlined text-xs text-blue-cyan">language</span> Web Institucional
+                  </span>
+                  <span
+                    class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
+                    <span class="material-symbols-outlined text-xs text-gold-metallic">spa</span> Estética
+                  </span>
+                  <span
+                    class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
+                    <span class="material-symbols-outlined text-xs text-blue-cyan">chat</span> WhatsApp
+                  </span>
+                </div>
+              </div>
+
+              <div class="p-6 pt-0 flex items-center justify-between gap-3 flex-wrap mt-auto">
+                <a href="https://mimatesiempre-estetica.netlify.app/" target="_blank" rel="noopener"
+                  class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-service-web hover:brightness-110 text-white font-label-interactive text-label-interactive font-bold transition-all text-sm">
+                  <span class="material-symbols-outlined text-base">open_in_new</span>
+                  Ver sitio
+                </a>
+                <a href="/contacto"
+                  class="font-label-interactive text-label-interactive text-primary hover:text-gold-light inline-flex items-center gap-1 text-sm">
+                  Consultar similar
+                  <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- ════════════════════════════════════════════
+                 CARD 4: AGRO.IK — App Web Mobile
+                 ════════════════════════════════════════════ -->
+            <div
+              class="portfolio-card rounded-2xl bg-surface-container overflow-hidden border border-white/5 flex flex-col group"
+              data-category="web">
+
+              <div class="carousel relative h-72 sm:h-80 overflow-hidden bg-surface-container-lowest carousel-frame"
+                data-images='[
+                   "assets/images/portfolio/agro-ik/1-login.jpeg",
+                   "assets/images/portfolio/agro-ik/2-formulario.jpeg",
+                   "assets/images/portfolio/agro-ik/3-sheets.jpeg",
+                   "assets/images/portfolio/agro-ik/inicio.jpeg"
+                 ]' data-autoplay="5000">
+
+                <div class="carousel-blur-bg absolute inset-0 pointer-events-none"></div>
+                <div class="absolute inset-x-0 top-0 h-20 carousel-top-overlay pointer-events-none z-10"></div>
+                <div
+                  class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface-container to-transparent pointer-events-none z-10">
+                </div>
+
+                <div class="carousel-viewport relative w-full h-full z-20">
+                  <img
+                    class="carousel-image w-full h-full object-contain object-center transition-opacity duration-500 absolute inset-0 opacity-0 p-3"
+                    alt="AGRO.IK - App Web Mobile">
+                </div>
+
+                <span
+                  class="absolute top-4 left-4 font-label-caps text-label-caps px-3 py-1 rounded-full bg-service-web/85 text-white backdrop-blur-md uppercase tracking-wider z-30">
+                  App Web Mobile
+                </span>
+
+                <span
+                  class="carousel-counter absolute top-4 right-4 font-label-caps text-label-caps px-2.5 py-1 rounded-full bg-surface-base/70 backdrop-blur-md text-text-primary z-30">
+                  1 / 4
+                </span>
+
+                <button type="button" aria-label="Imagen anterior"
+                  class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-30 cursor-pointer">
+                  <span class="material-symbols-outlined text-xl">chevron_left</span>
+                </button>
+
+                <button type="button" aria-label="Imagen siguiente"
+                  class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-30 cursor-pointer">
+                  <span class="material-symbols-outlined text-xl">chevron_right</span>
+                </button>
+
+                <div class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-30">
+                </div>
+              </div>
+
+              <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-start justify-between gap-3 mb-2">
+                  <h3 class="font-headline-sm text-headline-sm text-text-primary font-semibold leading-snug">
+                    AGRO.IK — Registro Agro
+                  </h3>
+                  <span class="text-xs text-text-muted font-mono shrink-0 pt-0.5">Agro</span>
+                </div>
+
+                <p class="font-body-default text-body-sm text-text-secondary mb-4 leading-relaxed flex-1">
+                  Una aplicación web adaptable al celular para registrar los trabajos agrícolas del día y guardar los
+                  datos en Google Sheets, facilitando el seguimiento de las tareas.
+                </p>
+
+                <div class="flex flex-wrap gap-2 pt-2">
+                  <span
+                    class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
+                    <span class="material-symbols-outlined text-xs text-blue-cyan">smartphone</span> Mobile-first
+                  </span>
+                  <span
+                    class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
+                    <span class="material-symbols-outlined text-xs text-gold-metallic">sync</span> Google Sheets
+                  </span>
+                  <span
+                    class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
+                    <span class="material-symbols-outlined text-xs text-blue-cyan">agriculture</span> Multi-cultivo
+                  </span>
+                </div>
+              </div>
+
+              <div class="p-6 pt-0 flex items-center justify-between mt-auto">
+                <span class="font-body-sm text-xs text-blue-cyan font-semibold">
+                  • Sin planillas manuales
+                </span>
+                <a href="/contacto"
+                  class="font-label-interactive text-label-interactive text-primary hover:text-gold-light inline-flex items-center gap-1 text-sm">
+                  Consultar por similares
+                  <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- ════════════════════════════════════════════
+                 CARD 5: ENTERRIANITOS
+                 ════════════════════════════════════════════ -->
+            <div
+              class="portfolio-card rounded-2xl bg-surface-container overflow-hidden border border-white/5 flex flex-col group"
+              data-category="identidad">
+
+              <div class="carousel relative h-72 sm:h-80 overflow-hidden bg-surface-container-lowest carousel-frame"
+                data-images='["assets/images/portfolio/entrerrianitos/1.png"]' data-autoplay="0">
+
+                <div class="absolute inset-x-0 top-0 h-20 carousel-top-overlay pointer-events-none z-10"></div>
+                <div
+                  class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface-container to-transparent pointer-events-none z-10">
+                </div>
+
+                <div class="carousel-viewport relative w-full h-full z-20">
+                  <img
+                    class="carousel-image w-full h-full object-cover object-center transition-opacity duration-500 absolute inset-0 opacity-0"
+                    alt="Enterrianitos Descartables">
+                </div>
+
+                <span
+                  class="absolute top-4 left-4 font-label-caps text-label-caps px-3 py-1 rounded-full bg-service-branding/85 text-white backdrop-blur-md uppercase tracking-wider z-30">
+                  Identidad Visual
+                </span>
+              </div>
+
+              <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-start justify-between gap-3 mb-2">
+                  <h3 class="font-headline-sm text-headline-sm text-text-primary font-semibold leading-snug">
+                    Enterrianitos Descartables
+                  </h3>
+                  <span class="text-xs text-text-muted font-mono shrink-0 pt-0.5">Entre Ríos, ARG</span>
+                </div>
+                <p class="font-body-default text-body-sm text-text-secondary mb-4 leading-relaxed flex-1">
+                  Identidad completa para distribuidora de insumos descartables.
+                </p>
+                <div class="flex flex-wrap gap-2 pt-2">
+                  <span
+                    class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
+                    <span class="material-symbols-outlined text-xs text-gold-metallic">design_services</span> Logotipo
+                  </span>
+                </div>
+              </div>
+
+              <div class="p-6 pt-0 flex items-center justify-between mt-auto">
+                <span class="font-body-sm text-xs text-gold-metallic font-semibold">• A su medida</span>
+                <a href="/contacto"
+                  class="font-label-interactive text-label-interactive text-primary hover:text-gold-light inline-flex items-center gap-1 text-sm">
+                  Consultar identidad
+                  <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- ════════════════════════════════════════════
+                 CARD 6: ELECTRO-SOLUCIONES
+                 ════════════════════════════════════════════ -->
+            <div
+              class="portfolio-card rounded-2xl bg-surface-container overflow-hidden border border-white/5 flex flex-col group"
+              data-category="identidad">
+
+              <div class="carousel relative h-72 sm:h-80 overflow-hidden bg-surface-container-lowest carousel-frame"
+                data-images='[
+                     "assets/images/portfolio/electrosoluciones/1.png",
+                     "assets/images/portfolio/electrosoluciones/2.png"
+                   ]' data-autoplay="5000">
+
+                <div class="absolute inset-x-0 top-0 h-20 carousel-top-overlay pointer-events-none z-10"></div>
+                <div
+                  class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface-container to-transparent pointer-events-none z-10">
+                </div>
+
+                <div class="carousel-viewport relative w-full h-full z-20">
+                  <img
+                    class="carousel-image w-full h-full object-cover object-center transition-opacity duration-500 absolute inset-0 opacity-0"
+                    alt="Electro-Soluciones Industriales">
+                </div>
+
+                <span
+                  class="absolute top-4 left-4 font-label-caps text-label-caps px-3 py-1 rounded-full bg-service-branding/85 text-white backdrop-blur-md uppercase tracking-wider z-30">
+                  Identidad Visual
+                </span>
+
+                <span
+                  class="carousel-counter absolute top-4 right-4 font-label-caps text-label-caps px-2.5 py-1 rounded-full bg-surface-base/70 backdrop-blur-md text-text-primary z-30">
+                  1 / 2
+                </span>
+
+                <button type="button" aria-label="Imagen anterior"
+                  class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-30 cursor-pointer">
+                  <span class="material-symbols-outlined text-xl">chevron_left</span>
+                </button>
+
+                <button type="button" aria-label="Imagen siguiente"
+                  class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-base/70 hover:bg-surface-base/90 backdrop-blur-md text-text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-30 cursor-pointer">
+                  <span class="material-symbols-outlined text-xl">chevron_right</span>
+                </button>
+
+                <div class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-30">
+                </div>
+              </div>
+
+              <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-start justify-between gap-3 mb-2">
+                  <h3 class="font-headline-sm text-headline-sm text-text-primary font-semibold leading-snug">
+                    Electro-Soluciones Integrales
+                  </h3>
+                  <span class="text-xs text-text-muted font-mono shrink-0 pt-0.5">Electricista</span>
+                </div>
+                <p class="font-body-default text-body-sm text-text-secondary mb-4 leading-relaxed flex-1">
+                  Identidad visual para cliente particular. Diseño de logotipo y tarjeta de presentación con
+                  aplicaciones para uso digital e impreso.
+                </p>
+                <div class="flex flex-wrap gap-2 pt-2">
+                  <span
+                    class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
+                    <span class="material-symbols-outlined text-xs text-gold-metallic">design_services</span> Logotipo
+                  </span>
+                  <span
+                    class="text-xs px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant flex items-center gap-1">
+                    <span class="material-symbols-outlined text-xs text-gold-metallic">badge</span> Tarjeta
+                  </span>
+                </div>
+              </div>
+
+              <div class="p-6 pt-0 flex items-center justify-between mt-auto">
+                <span class="font-body-sm text-xs text-gold-metallic font-semibold">• Sistema gráfico completo</span>
+                <a href="/contacto"
+                  class="font-label-interactive text-label-interactive text-primary hover:text-gold-light inline-flex items-center gap-1 text-sm">
+                  Consultar identidad
+                  <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- ════════════════════════════════════════════
+                 CARD 7: PLACEHOLDER
+                 ════════════════════════════════════════════ -->
+            <div
+              class="portfolio-card rounded-2xl bg-surface-container overflow-hidden border border-dashed border-white/10 flex flex-col"
               data-category="web">
               <div
-                class="relative h-60 w-full overflow-hidden bg-surface-container-lowest flex items-center justify-center">
+                class="relative h-72 sm:h-80 w-full overflow-hidden bg-gradient-to-br from-surface-container-lowest via-surface-container to-surface-container-lowest flex items-center justify-center">
                 <div class="flex flex-col items-center gap-3 text-text-muted">
                   <span class="material-symbols-outlined text-5xl opacity-50">add_photo_alternate</span>
                   <span class="font-label-caps text-label-caps uppercase tracking-wider opacity-60">Próximamente</span>
                 </div>
               </div>
               <div class="p-6 flex flex-col flex-1">
-                <h3 class="font-headline-sm text-headline-sm text-text-primary font-semibold mb-2">Tu proyecto podría estar acá</h3>
-                <p class="font-body-sm text-body-sm text-text-secondary flex-1">Cada nueva idea es una oportunidad para crear algo único.
-                  de éxito.</p>
+                <h3 class="font-headline-sm text-headline-sm text-text-primary font-semibold mb-2 leading-snug">
+                  Tu proyecto podría estar acá
+                </h3>
+                <p class="font-body-sm text-body-sm text-text-secondary flex-1">
+                  Cada nueva idea es una oportunidad para crear algo único.
+                </p>
+              </div>
+              <div class="p-6 pt-0 flex items-center justify-between mt-auto">
+                <span class="font-body-sm text-xs text-text-muted font-semibold">• Espacio disponible</span>
+                <a href="/contacto"
+                  class="font-label-interactive text-label-interactive text-primary hover:text-gold-light inline-flex items-center gap-1 text-sm">
+                  Hablemos
+                  <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
               </div>
             </div>
 
@@ -660,7 +824,11 @@ Conocé algunos de los trabajos que fui creando: páginas web, herramientas digi
             class="relative rounded-3xl p-8 sm:p-14 overflow-hidden bg-gradient-to-br from-surface-elevated via-surface-container to-surface-base shadow-2xl text-center">
             <h2 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">
               ¿Tenés una idea?<span class="text-gold-light"> ¡Hagámosla realidad! </span>
-            </h2>Cada proyecto empieza con una charla. Contame qué necesitás y pensemos juntos una solución que se adapte a vos.
+            </h2>
+            <p class="font-body-lead text-body-lead text-text-secondary max-w-2xl mx-auto mt-4">
+              Cada proyecto empieza con una charla. Contame qué necesitás y pensemos juntos una solución que se adapte
+              a vos.
+            </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
               <a href="/contacto"
                 class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-blue-electric hover:bg-surface-tint font-label-interactive text-text-primary shadow-lg transition-all">
@@ -685,7 +853,7 @@ Conocé algunos de los trabajos que fui creando: páginas web, herramientas digi
   <script src="js/core/layout.js?v=1.0.0"></script>
   <script src="js/core/main.js?v=1.0.0"></script>
   <script src="js/modules/filters.js?v=1.0.0"></script>
-  <script src="js/modules/carrusel.js?v=1.0.0"></script>
+  <script src="js/modules/carrusel.js?v=1.0.1"></script>
   <script src="js/modules/lightbox.js?v=1.0.0"></script>
 </body>
 

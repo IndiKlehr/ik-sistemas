@@ -12,6 +12,7 @@
    - Video: autoplay, muted, loop, playsinline
    - Imágenes: fade in/out
    - Autoplay del carrusel: se pausa al pasar mouse o interactuar
+   - Fondo blur (.carousel-blur-bg): se sincroniza con el slide actual
    ============================================================ */
 
 (function () {
@@ -43,6 +44,9 @@
     const dotsWrap   = el.querySelector('.carousel-dots');
     const counterEl  = el.querySelector('.carousel-counter');
     const videoBadge = el.querySelector('.carousel-video-badge');
+
+    // 🔵 BLUR: contenedor del fondo blur (opcional)
+    const blurBg     = el.querySelector('.carousel-blur-bg');
 
     if (!viewport) return;
 
@@ -81,6 +85,12 @@
       viewport.appendChild(videoEl);
     }
 
+    /* 🔵 BLUR: actualiza el fondo difuminado con la imagen actual */
+    function updateBlur(src) {
+      if (!blurBg || !src) return;
+      blurBg.style.backgroundImage = `url("${src}")`;
+    }
+
     /* --- Render --- */
     function render(index) {
       currentIndex = (index + slides.length) % slides.length;
@@ -96,6 +106,9 @@
         // Forzar un frame para que la transición funcione
         requestAnimationFrame(() => imgEl.classList.remove('opacity-0'));
 
+        // 🔵 BLUR: sincronizar fondo con la imagen actual
+        updateBlur(slide.src);
+
         if (videoEl) {
           try { videoEl.pause(); } catch (e) {}
         }
@@ -109,6 +122,12 @@
           playPromise.catch(() => {});
         }
         requestAnimationFrame(() => videoEl.classList.remove('opacity-0'));
+
+        // 🔵 BLUR: si el slide es video, usar la primera imagen como fondo
+        // (o el poster del video si lo tuvieras). Si no hay imágenes, dejar el último fondo.
+        if (images.length > 0) {
+          updateBlur(images[0]);
+        }
 
         if (videoBadge) videoBadge.style.display = 'flex';
       }
